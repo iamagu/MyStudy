@@ -20,3 +20,49 @@
 
 3. 字符
     1. byte
+    2. rune
+
+## 流程控制
+1. if分支
+2. switch分支
+    1. case多条件
+        switch {
+        case "a", "b", "c":
+            // do something
+        default:
+            // do default thing
+        }
+
+    2. case条件表达式
+        switch {
+        case 1>0 & 2> 3:
+            // do something
+        default:
+            // do default thing
+        }
+
+    3. fallthrough,无条件执行下一个case
+
+3. for循环
+    完整格式
+    for <初始语句>; <执行条件表达式>; <执行后语句> {
+        // do something
+    }
+    
+    无限循环
+    for {
+        // do something
+    }
+    
+    只有条件
+    for <执行条件表达式> {
+        // do something
+    }
+    
+    跳出循环
+    break、goto、return、panic
+    
+    for range循环（键值循环）：数组、切片、字符串、map、通道
+    for key, val := range coll {
+        // do something
+    }
